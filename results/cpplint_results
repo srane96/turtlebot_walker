@@ -1,0 +1,6 @@
+cpplint $( find . -name \*.hpp -or -name \*.cpp | grep -vE -e "^./build/" -e "^./vendor/" -e "^./docs/" -e "^./results" )
+
+*Result:
+Done processing ./src/walker.cpp
+Done processing ./src/main.cpp
+

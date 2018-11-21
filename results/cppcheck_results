@@ -1,0 +1,10 @@
+cppcheck --enable=all --std=c++11 -I include/ --suppress=missingIncludeSystem $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" )
+
+*Results
+Checking src/main.cpp...
+1/2 files checked 30% done
+Checking src/walker.cpp...
+[src/walker.cpp:61]: (warning) Member variable 'Walker::obstacleDetected' is not initialized in the constructor.
+2/2 files checked 100% done
+(information) Cppcheck cannot find all the include files (use --check-config for details)
+

@@ -16,7 +16,7 @@
 	pkg= "rosbag"
 	name= "record_bag"
 	type= "record"
-	args = "--all --output-name=$(find beginner_tutorials)/results/recorder.bag -x /camera/(.*) --duration=30"
+	args = "--all --output-name=$(find turtlebot_walker)/results/recorder.bag -x /camera/(.*) --duration=30"
 	if = "$(arg rosbagRecorder)"
     />
 </launch>

@@ -32,13 +32,18 @@
  *
  * main C++ program to create a turtlebot object of class Walker'
  */
-#include "walker.h"
+#include "../include/walker.h"
 int main(int argc, char* argv[]) {
   /// Initialize the ros node
   ros::init(argc, argv, "turtlebot_walker");
   /// Create the walker object
   Walker robot;
   /// Run the walker behaviour
+  /// Update the parameters
+  if (robot.getMaxSpeed() == 0.0)
+    robot.setMaxSpeed(0.8);
+  if (robot.getMaxRotation() == 0.0)
+    robot.setMaxRotation(1.0);
   robot.startMotion();
   return 0;
 }

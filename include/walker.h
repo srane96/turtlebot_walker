@@ -30,7 +30,7 @@
  *
  * @section DESCRIPTION
  *
- * C++ source file for Walker class which adds functionality of obstacle avoidance
+ * C++ header file for Walker class which adds functionality of obstacle avoidance
  * to the gazebo turtlebot.
  */
 #ifndef INCLUDE_WALKER_HPP_

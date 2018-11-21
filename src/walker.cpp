@@ -34,7 +34,7 @@
  * avoidance to the gazebo turtlebot.
  */
 #include <iostream>
-#include "walker.h"
+#include "../include/walker.h"
 /// Implementation of default Walker constructor
 Walker::Walker() {
   /// Default max speed value
@@ -61,7 +61,7 @@ Walker::Walker() {
 Walker::Walker(const float& linear, const float& rotation,
                const double& safe) {
   maxSpeed = linear;
-  if (rotation > 1.57 or rotation < -1.57) {
+  if (rotation > 1.57 || rotation < -1.57) {
     ROS_WARN("Angle should not be more than 90deg");
     ROS_INFO("Using default value");
     maxRotation = rotation;
@@ -86,7 +86,7 @@ void Walker::startMotion() {
   while (ros::ok()) {
     /// If obstacle in safe area stop the robot and rotate
     if (getObstacleDetected()) {
-      ROS_INFO("Mayday Mayday!");
+      ROS_INFO("Mayday Mayday! Obstacle present within %f", getSafeDistance());
       msg.linear.x = 0.0;
       msg.angular.z = maxRotation;
     } else {
