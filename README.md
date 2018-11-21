@@ -17,7 +17,10 @@ To run the given code, Following are the system requirements:
 ### Installation process
 #### 1. ROS Kinetic:
 Install ROS Kinetic using following [link](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment)
-
+#### 3. Install Gazebo
+```
+$ sudo apt-get install ros-kinetic-gazebo-ros-pkgs ros-kinetic-gazebo-ros-control
+```
 #### 2. Turtlebot simulator
 To install turtlebot simulator on ROS Kinetic, use following command:
 ```
@@ -52,7 +55,7 @@ $ roslaunch turtlebot_walker turtle.launch
 ```
 You will see the turtlebot navigating the enviroment by avoiding obstacles.
 
-#### Run the code using launch files
+#### Run the code using executable
 First initiate the ros master
 ```
 $ roscore
